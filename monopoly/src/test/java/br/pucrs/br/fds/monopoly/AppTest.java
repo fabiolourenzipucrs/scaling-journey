@@ -1,9 +1,10 @@
 package br.pucrs.br.fds.monopoly;
 
-import junit.framework.Test;
+
+import org.junit.*;
+
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
-
 /**
  * Unit test for simple App.
  */
@@ -25,12 +26,10 @@ public class AppTest
      */
     public static Test suite()
     {
-        return new TestSuite( AppTest.class );
+        return (Test) new TestSuite( AppTest.class );
     }
 
-    /**
-     * Rigourous Test :-)
-     */
+    @Test
     public void testApp()
     {
         assertTrue( true );
