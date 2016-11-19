@@ -22,6 +22,7 @@ public class GameboardCreationTest{
 		assertSame(board.queryCell("Blue 3"), northCells.get(0));
 		assertSame(board.queryCell("Green 1"), northCells.get(1));
 		assertSame(board.queryCell("Green 2"), northCells.get(2));
+		@SuppressWarnings("rawtypes")
 		List westCells = GameBoardUtil.getWestCells(board);
 		assertEquals(0, westCells.size());
 		List southCells = GameBoardUtil.getSouthCells(board);
