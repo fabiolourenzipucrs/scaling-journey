@@ -5,9 +5,9 @@ import static org.junit.Assert.*;
 import org.junit.*;
 
 import edu.ncsu.monopoly.Card;
-import edu.ncsu.monopoly.Cell;
 import edu.ncsu.monopoly.GameBoardCCMovePlayer;
 import edu.ncsu.monopoly.GameMaster;
+import edu.ncsu.monopoly.IOwnable;
 import edu.ncsu.monopoly.MockGUI;
 import edu.ncsu.monopoly.MovePlayerCard;
 
@@ -36,7 +36,7 @@ public class MovePlayerCardTest {
 		Card card = gameMaster.drawCCCard();
 		assertEquals(movePlayerCard, card);
 		card.applyAction();
-		Cell cell = gameMaster.getCurrentPlayer().getPosition();
+		IOwnable cell = gameMaster.getCurrentPlayer().getPosition();
 		assertEquals(gameMaster.getGameBoard().queryCell("Blue 1"), cell);
     }
     
@@ -47,7 +47,7 @@ public class MovePlayerCardTest {
         assertFalse(gameMaster.getGUI().isEndTurnButtonEnabled());
         gameMaster.btnDrawCardClicked();
         assertFalse(gameMaster.getGUI().isDrawCardButtonEnabled());
-		Cell cell = gameMaster.getCurrentPlayer().getPosition();
+		IOwnable cell = gameMaster.getCurrentPlayer().getPosition();
 		assertEquals(gameMaster.getGameBoard().queryCell("Blue 1"), cell);
 		assertTrue(gameMaster.getGUI().isEndTurnButtonEnabled());
 		assertEquals(1700, gameMaster.getCurrentPlayer().getMoney());

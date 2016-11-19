@@ -4,9 +4,9 @@ import static org.junit.Assert.*;
 
 import org.junit.*;
 
-import edu.ncsu.monopoly.Cell;
 import edu.ncsu.monopoly.GameBoard;
 import edu.ncsu.monopoly.GameMaster;
+import edu.ncsu.monopoly.IOwnable;
 import edu.ncsu.monopoly.MockGUI;
 import edu.ncsu.monopoly.Player;
 import edu.ncsu.monopoly.PropertyCell;
@@ -43,7 +43,7 @@ public class PlayerTest {
 		GameBoard gameboard = gameMaster.getGameBoard();
 		Player player1 = new Player();
 		Player player2 = new Player();
-		Cell go = gameboard.queryCell("Go");
+		IOwnable go = gameboard.queryCell("Go");
 		assertSame(go, player1.getPosition());
 		assertSame(go, player2.getPosition());
 	}

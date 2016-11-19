@@ -4,15 +4,15 @@ import static org.junit.Assert.*;
 
 import org.junit.*;
 
-import edu.ncsu.monopoly.Cell;
 import edu.ncsu.monopoly.GameBoard;
+import edu.ncsu.monopoly.IOwnable;
 import edu.ncsu.monopoly.PropertyCell;
 import edu.ncsu.monopoly.SimpleGameBoard;
 
 
 public class GameboardTest {
 
-	Cell cell;
+	IOwnable cell;
 	GameBoard gameBoard;
 	
 	@Before
