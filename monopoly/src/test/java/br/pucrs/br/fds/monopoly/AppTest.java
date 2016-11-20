@@ -1,6 +1,7 @@
 package br.pucrs.br.fds.monopoly;
 
 import junit.framework.Test;
+import org.junit.*;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
 
