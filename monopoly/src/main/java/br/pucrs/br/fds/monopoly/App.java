@@ -1,7 +1,5 @@
 package br.pucrs.br.fds.monopoly;
 
-import org.junit.*;
-
 /**
  * Hello world!
  *
